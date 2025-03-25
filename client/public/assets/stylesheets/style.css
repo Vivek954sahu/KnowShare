@@ -139,6 +139,7 @@ form {
   border-radius: 10px;
   color: white;
   background-color: var(--primary);
+  cursor: pointer;
 }
 #loginForm button, #registerForm button, #create-post-form button:hover{
   background-color: var(--secondary);
@@ -241,6 +242,59 @@ form {
 
 
 
+@media  (max-width:450px) {
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  
+  .btn {
+    padding: 8px 16px;
+  }
+  
+  form {
+    max-width: 500px;
+
+  }
+  .landing-buttons .btn {
+    margin: 0 1px;
+  }
+  #loginForm, #registerForm, #create-post-form {
+    width: 80vw;
+  }
+  
+  
+  .post-card h3{
+    font-size: 20px;
+  }
+  
+  .post-card p{
+    font-size: 15px;
+
+  }
+  .post-card .meta{
+    font-size: 10px;
+  }
+  .view-btn{
+    margin: auto;
+    width: 40px;
+    height: 25px;
+  }
+
+  .comments{
+    margin-top: 10px;
+  }
+  .comments h3{
+    font-size: 12px;
+  }
+  
+  
+}
 
 
 
