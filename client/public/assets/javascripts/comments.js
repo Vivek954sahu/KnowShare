@@ -12,7 +12,7 @@ export async function loadComments(postId) {
 
     commentsContainer.innerHTML = comments.map(comment => `
       <div class="comment">
-        <p><strong>${comment.author?.username || 'Anonymous'}</strong>:</p>
+        <p><strong>${comment.username || 'Anonymous'}</strong>:</p>
         <p>${comment.content}</p>
         <small>${new Date(comment.createdAt).toLocaleString()}</small>
       </div>
