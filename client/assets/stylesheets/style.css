@@ -1,0 +1,625 @@
+:root {
+  --primary: #4e54c8;
+  --secondary: #8f94fb;
+  --text: #333;
+  --background: #f9f9f9;
+  --card: #fff;
+  --border: #ddd;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header, footer {
+  background: var(--primary);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1, footer p {
+  margin: 0;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.center {
+  text-align: center;
+}
+
+.landing {
+  margin-top: 100px;
+}
+
+.landing-buttons {
+  margin-top: 30px;
+}
+
+.landing-buttons .btn {
+  margin: 0 10px;
+}
+.auth-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+#loginForm, #registerForm, #create-post-form {
+  width: 500px;
+  height: 300px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+
+#loginForm input, #registerForm input, #create-post-form input{
+  height: 40px;
+  padding: 10px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  outline-color: #4e54c8;
+}
+#loginForm button , #registerForm button, #create-post-form button{
+  font-weight: bold;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--primary);
+}
+#loginForm button, #registerForm button, #create-post-form button:hover{
+  background-color: var(--secondary);
+  color: #333;
+}
+
+.feed{
+  width:100%;
+  background-color: rgb(254, 249, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post-feed-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+.post-card, #single-post{
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: aliceblue;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+.post-card h3{
+  margin: auto;
+  font-size: 26px;
+  text-decoration: underline;
+}
+
+.post-card p{
+  font-size: 22px;
+  color: #127cff;
+}
+.post-card .meta{
+  font-size: 12px;
+  color: black;
+}
+.view-btn{
+  margin: auto;
+  width: 50px;
+  height: 30px;
+  color: rgb(40, 40, 40);
+  background-color: #8f94fb;
+  border: none;
+  border-radius: 5px;
+}
+
+#create-post-form textarea{
+  padding: 10px;
+  border: 2px solid #8f94fb;
+  outline-color: #8f94fb;
+  border-radius: 10px;
+}
+
+.comments{
+  padding: 15px;
+  width: 60%;
+  margin-top: 20px;
+  border:2px solid #8f94fb;
+  border-radius: 10px;
+}
+.comments h3{
+  font-size: 16px;
+  text-decoration: underline;
+}
+.comments #comments-container{
+  margin-top: 10px;
+}
+.comment-form{
+  margin-top: 20px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.comment-form textarea{
+  padding: 5px;
+ height: 25px;
+ border:1px solid #127cff;
+ border-radius: 8px;
+}
+.comment-form button{
+  margin: auto;
+  width: 80%;
+  height: 25px;
+  color: #1e1e1e;
+  background-color: #8f94fb;
+  border: none;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #181818;
+  }
+
+  .landing {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h1 span {
+    color: #00bcd4;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.primary {
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  
+  .btn.primary:hover {
+    background-color: #0097a7;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #00bcd4;
+    color: #fff;
+  }
+
+  
+  /* * Navbar styles */
+  /*
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e1726;
+  color: white;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.footer {
+    background-color: #0e1726;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #333;
+  }
+  
+  .post-feed {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 1rem;
+  }
+  
+  .post-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .post-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+  }
+
+  .post-detail {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .comments-section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  #comment-input {
+    width: 100%;
+    min-height: 80px;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  #submit-comment {
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  #submit-comment:hover {
+    background-color: #0056b3;
+  }
+  
+  .comment {
+    background: #fff;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  
+  .form-page {
+    max-width: 400px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.6rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #218838;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 0.5rem;
+    text-align: center;
+  } */
+
+   

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post</title>
+  <link rel="stylesheet" href="../assets/stylesheets/style.css" />
+</head>
+<body>
+  
+
+  <main class="container">
+    <section id="single-post" class="post-details">
+      <!-- Post content will be injected here -->
+    </section>
+
+    <section id="comments-section" class="comments">
+      <h3>Comments</h3>
+      <div id="comments-container"></div>
+
+      <form id="comment-form-wrapper" class="comment-form">
+        <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+        <button type="submit" id="submit-comment" >Post Comment</button>
+      </form>
+    </section>
+  </main>
+
+  
+
+  <script type="module" src="../assets/javascripts/main.js"></script>
+  <script type="module">
+    import { displaySinglePost } from '../assets/javascripts/posts.js';
+    import { loadComments, handleNewComment } from '../assets/javascripts/comments.js';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('id');
+
+    if (postId) {
+      displaySinglePost(postId);
+      loadComments(postId);
+      handleNewComment(postId);
+    }
+  </script>
+</body>
+</html>

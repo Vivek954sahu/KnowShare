@@ -1,0 +1,34 @@
+<!-- client/pages/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/stylesheets/style.css" />
+</head>
+<body>
+
+
+  <main class="container">
+    <h2>My Posts</h2>
+
+    <!-- Create Post Form -->
+    <form id="create-post-form">
+      <input type="text" id="post-title" placeholder="Post title" required />
+      <textarea id="post-content" placeholder="Post content" required></textarea>
+      <button type="submit">Create Post</button>
+    </form>
+
+    <!-- List of Posts -->
+    <div id="user-posts" class="posts-container"></div>
+  </main>
+
+
+
+  <script type="module" src="../assets/javascripts/main.js"></script>
+  <script type="module">
+    import { setupDashboard } from '../assets/javascripts/posts.js';
+    setupDashboard();
+  </script>
+</body>
+</html>
