@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if(res.token){
         localStorage.setItem("token", res.token);
-        window.location.href = '/client/pages/home.html';
+        window.location.href = '/pages/home.html';
       }else{
         alert ( res.message || "Login failed!");
       }
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if(res.message === 'User created successfully'){
         alert('Registration successful! Please log in.');
-        window.location.href = '/client/pages/login.html';
+        window.location.href = '/pages/login.html';
       } else {
         alert(res.message || 'Registration failed.');
       }

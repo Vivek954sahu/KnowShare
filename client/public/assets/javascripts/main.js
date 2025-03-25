@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // function to load header dynamically
 function loadHeader() {
-  fetch("/KnowShare/client/components/header.html")
+  fetch("/components/header.html")
   .then((res) => res.text())
   .then((data) => {
     document.body.insertAdjacentHTML("afterbegin", data);
@@ -25,7 +25,7 @@ function loadHeader() {
 
 // function to load footer dynamically
 function loadFooter () {
-  fetch("/client/components/footer.html")
+  fetch("/components/footer.html")
     .then((res) => res.text())
     .then((data) => {
       document.body.insertAdjacentHTML("beforeend", data);
@@ -40,15 +40,15 @@ function updateNavLinks () {
 
   if(token){
     nav.innerHTML = `
-      <a href="/client/pages/dashboard.html">Dashboard</a>
+      <a href="/pages/dashboard.html">Dashboard</a>
       <a href="#" id="logout">Logout</a>
     `;
     document.getElementById("logout").addEventListener("click", () => logout());
 
   }else{
     nav.innerHTML = `
-      <a href="/client/pages/login.html">Login</a>
-      <a href="/client/pages/register.html">Register</a>
+      <a href="/pages/login.html">Login</a>
+      <a href="/pages/register.html">Register</a>
     `;
   }
 }
@@ -56,7 +56,7 @@ function updateNavLinks () {
 // Logout function
 function logout () {
   localStorage.removeItem('token');
-  window.location.href = '/client/pages/login.html';
+  window.location.href = '/pages/login.html';
 }
 
 // Utility: Get Auth Token

@@ -35,7 +35,7 @@ export async function displayPosts () {
       btn.addEventListener('click', (e) => {
         const postId = e.target.dataset.id;
         console.log(postId)
-        window.location.href = `/client/pages/post.html?id=${postId}`;
+        window.location.href = `/pages/post.html?id=${postId}`;
       });
     });
 
@@ -65,7 +65,7 @@ export async function displaySinglePost (postId) {
 export async function setupDashboard () {
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = '/client/pages/login.html';
+    window.location.href = '/pages/login.html';
     return;
   }
 
