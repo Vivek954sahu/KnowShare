@@ -1,7 +1,9 @@
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
 import User from "../models/user.model.js";
-import { JWT_SECRET } from "../env.js";
+
+dotenv.config();
 
 const authorize = async (req, res, next) => {
     try{
@@ -14,7 +16,7 @@ const authorize = async (req, res, next) => {
 
         if(!token) return res.status(401).json({message:"Unauthorized"});
 
-        const decoded = jwt.verify(token,JWT_SECRET);
+        const decoded = jwt.verify(token,process.env.JWT_SECRET);
 
         const user = await User.findById(decoded.userId).select("-password");
 

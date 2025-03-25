@@ -3,14 +3,14 @@ import mongoose from "mongoose";
 import cors from "cors";
 import http from "http";
 import { Server } from "socket.io";
-import { MONGODB_URI } from "./env.js";
+import dotenv from "dotenv";
 
 import authRouter from "../server/routes/authRoutes.js";
 import postRouter from "./routes/postRoutes.js";
 import commentRouter from "./routes/commentRoutes.js";
 import { setupSocket } from "./socket.js";
 
-
+dotenv.config();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -23,6 +23,7 @@ const io = new Server(server, {
 // MiddleWare
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use("/api/auth", authRouter);
@@ -30,7 +31,7 @@ app.use('/api/posts', postRouter);
 app.use('/api/comments', commentRouter);
 
 // Connect To MongoDB and starting server
-mongoose.connect(MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log(" ✅ Connected to MongoDB!");
     server.listen(process.env.PORT || 5000, () => {

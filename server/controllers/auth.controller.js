@@ -1,10 +1,10 @@
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { JWT_SECRET } from "../env.js";
-
+import dotenv from "dotenv";
+dotenv.config();
 const generateToken = (userId) => {
-    return jwt.sign({ userId }, JWT_SECRET, { expiresIn: '1d' });
+    return jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: '1d' });
   };
 
 
