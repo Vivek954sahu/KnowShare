@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // function to load header dynamically
 function loadHeader() {
-  fetch("/client/components/header.html")
+  fetch("/KnowShare/client/components/header.html")
   .then((res) => res.text())
   .then((data) => {
     document.body.insertAdjacentHTML("afterbegin", data);
