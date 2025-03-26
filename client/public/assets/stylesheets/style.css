@@ -264,10 +264,7 @@ form {
   .landing-buttons .btn {
     margin: 0 1px;
   }
-  #loginForm, #registerForm, #create-post-form {
-    width: 80vw;
-  }
-  
+
   
   .post-card h3{
     font-size: 20px;
@@ -292,7 +289,40 @@ form {
   .comments h3{
     font-size: 12px;
   }
-  
+
+  .auth-container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  #loginForm,
+  #registerForm,
+  #create-post-form {
+    width: 90vw !important;
+    height: auto !important;
+    padding: 20px;
+  }
+
+  #loginForm input,
+  #registerForm input,
+  #create-post-form input,
+  #create-post-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #loginForm button,
+  #registerForm button,
+  #create-post-form button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .switch-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+ 
   
 }
 
